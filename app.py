@@ -71,7 +71,7 @@ def proxy():
     if key != VALID_KEY:
         return jsonify({"success": False, "error": "Invalid key"}), 401
     if datetime.utcnow() > EXPIRE_AT:
-        return jsonify({"success": False, "error": "Proxy expired"}), 410
+        return jsonify({"success": False, "error": "api key expired dm at @TalktozionixBot for paid api's"}), 410
     if not type_ or not term:
         return jsonify({"success": False, "error": "Missing type or term"}), 400
 
