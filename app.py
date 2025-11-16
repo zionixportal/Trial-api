@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.INFO)
 
 # --- CONFIG ---
 VALID_KEY = "VALD7"
-EXPIRE_AT = datetime(2025, 11, 16, 23, 59, 59)
+EXPIRE_AT = datetime(2025, 11, 15, 23, 59, 59)
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/117 Safari/537.36",
@@ -71,7 +71,7 @@ def proxy():
     if key != VALID_KEY:
         return jsonify({"success": False, "error": "Invalid key"}), 401
     if datetime.utcnow() > EXPIRE_AT:
-        return jsonify({"success": False, "error": "api key expired dm at @TalktozionixBot for paid api's"}), 410
+        return jsonify({"success": False, "error": "api key expired dm at @TalktozionixBot for paid api's/njoin:@zionix_portal for more"}), 410
     if not type_ or not term:
         return jsonify({"success": False, "error": "Missing type or term"}), 400
 
