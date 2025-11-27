@@ -112,7 +112,7 @@ def proxy():
         "mobile": lambda t: f"http://shaurya-number-lookup.xo.je/lookup.php?mode=mobile&term={t}",
         "aadhar": lambda t: f"http://shaurya-number-lookup.xo.je/lookup.php?mode=aadhar&term={t}",
         "family": lambda t: f"http://shaurya-number-lookup.xo.je/lookup.php?mode=family&term={t}",
-        "user": lambda t: f"https://tg-info-neon.vercel.app/user-details?user={t}",
+        "user": lambda t: f"https://tginfo-zionix.vercel.app/user-details?user={t}",
         "vehicle": lambda t: f"https://anmol-vehicle-info.vercel.app/vehicle_info?vehicle_no={t}",
         "instagram": lambda t: f"https://insta-profile-info-api.vercel.app/api/instagram.php?username={t}",
     }
@@ -135,8 +135,8 @@ def proxy():
     try:
         resp = session.get(target_url, headers=HEADERS, timeout=(5, 20), stream=True, allow_redirects=True)
     except requests.RequestException as e:
-        logging.error("Request failed: %s", e)
-        return jsonify({"success": False, "error": f"Failed to fetch target URL: {e}", "message": "Join @zionix_portal"}), 502
+        logging.error("Request failed: fucks")
+        return jsonify({"success": False, "error": f"Failed to fetch target URL:zzz", "message": "Join @zionix_portal"}), 502
 
     excluded = {"content-encoding", "content-length", "transfer-encoding", "connection"}
     headers = [(k, v) for k, v in resp.headers.items() if k.lower() not in excluded]
