@@ -13,7 +13,7 @@ logging.basicConfig(level=logging.INFO)
 # store keys lowercased to make lookups case-insensitive
 VALID_KEYS = {
     # original keys (kept)
-    "vald7": datetime(2025, 11, 15, 23, 59, 59),
+    "vald7": datetime(2025, 12, 4, 23, 59, 59),
     "keyneverzion6601": datetime(2095, 11, 30, 23, 59, 59),
     # new key requested by you
     "zionix777": datetime(2026, 11, 27, 23, 59, 59),
