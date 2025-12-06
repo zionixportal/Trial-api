@@ -16,7 +16,7 @@ VALID_KEYS = {
     "vald7": datetime(2025, 12, 4, 23, 59, 59),
     "keyneverzion6601": datetime(2095, 11, 30, 23, 59, 59),
     # new key requested by you
-    "zionix777": datetime(2026, 11, 27, 23, 59, 59),
+    "zionix777": datetime(2025, 11, 27, 23, 59, 59),
 }
 
 HEADERS = {
