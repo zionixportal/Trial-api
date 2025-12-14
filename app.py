@@ -12,16 +12,14 @@ logging.basicConfig(level=logging.INFO)
 # --- CONFIG ---
 # store keys lowercased to make lookups case-insensitive
 VALID_KEYS = {
-    # original keys (kept)
-    "vald7": datetime(2025, 12, 4, 23, 59, 59),
+    "vald7": datetime(2025, 11, 15, 23, 59, 59),
     "keyneverzion6601": datetime(2095, 11, 30, 23, 59, 59),
-    # new key requested by you
-    "zionix777": datetime(2025, 11, 27, 23, 59, 59),
+    "zionix777": datetime(2026, 11, 27, 23, 59, 59),
 }
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0",
-    "Referer": "http://shaurya-number-lookup.xo.je/"
+    "Referer": "http://zionix.rf.gd/"
 }
 
 # ================================================
@@ -109,11 +107,11 @@ def proxy():
         return jsonify({"success": False, "error": "Missing type or term", "message": "Join @zionix_portal"}), 400
 
     ROUTES = {
-        "mobile": lambda t: f"http://shaurya-number-lookup.xo.je/lookup.php?mode=mobile&term={t}",
-        "aadhar": lambda t: f"http://shaurya-number-lookup.xo.je/lookup.php?mode=aadhar&term={t}",
-        "family": lambda t: f"http://shaurya-number-lookup.xo.je/lookup.php?mode=family&term={t}",
+        "mobile": lambda t: f"https://zionix.rf.gd/proxy.php?type=mobile&term={t}",
+        "aadhar": lambda t: f"http://zionix.rf.gd/proxy.php?mode=id_number&term={t}",
+        "pak": lambda t: f"http://shaurya-number-lookup.xo.je/proxy.php?type=pak&term={t}",
         "user": lambda t: f"https://tginfo-zionix.vercel.app/user-details?user={t}",
-        "vehicle": lambda t: f"https://anmol-vehicle-info.vercel.app/vehicle_info?vehicle_no={t}",
+        "vehicle": lambda t: f"https://zionix.rf.gd/proxy.php?type=rc&term={t}",
         "instagram": lambda t: f"https://insta-profile-info-api.vercel.app/api/instagram.php?username={t}",
     }
 
@@ -135,8 +133,8 @@ def proxy():
     try:
         resp = session.get(target_url, headers=HEADERS, timeout=(5, 20), stream=True, allow_redirects=True)
     except requests.RequestException as e:
-        logging.error("Request failed: fucks")
-        return jsonify({"success": False, "error": f"Failed to fetch target URL:zzz", "message": "Join @zionix_portal"}), 502
+        logging.error("Request failed: %s")
+        return jsonify({"success": False, "error": f"Failed to fetch target URL: contact @TalktozionixBot", "message": "Join @zionix_portal"}), 502
 
     excluded = {"content-encoding", "content-length", "transfer-encoding", "connection"}
     headers = [(k, v) for k, v in resp.headers.items() if k.lower() not in excluded]
