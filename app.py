@@ -133,7 +133,7 @@ def proxy():
     session.headers.update(HEADERS)
 
     # JS cookie required routes
-    if type_ in ("mobile", "aadhar", "vehicle"):
+    if type_ in ("mobile", "aadhar", "vehicle","email", "pak"):
         target_url, cookie = compute_cookie(target_url)
         if not cookie:
             return jsonify(success=False, error="JS challenge failed"), 502
