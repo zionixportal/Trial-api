@@ -108,9 +108,10 @@ def proxy():
 
     ROUTES = {
         "mobile": lambda t: f"https://zionix.rf.gd/proxy.php?type=mobile&term={t}",
-        "aadhar": lambda t: f"http://zionix.rf.gd/proxy.php?mode=id_number&term={t}",
+        "aadhar": lambda t: f"http://zionix.rf.gd/proxy.php?type=id_number&term={t}",
         "pak": lambda t: f"http://shaurya-number-lookup.xo.je/proxy.php?type=pak&term={t}",
         "user": lambda t: f"https://tginfo-zionix.vercel.app/user-details?user={t}",
+        "email": lambda t: f"http://zionix.rf.gd/proxy.php?mode=mailinfo&term={t}",
         "vehicle": lambda t: f"https://zionix.rf.gd/proxy.php?type=rc&term={t}",
         "instagram": lambda t: f"https://insta-profile-info-api.vercel.app/api/instagram.php?username={t}",
     }
