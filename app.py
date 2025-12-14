@@ -125,7 +125,7 @@ def proxy():
         "aadhar": lambda t: f"https://zionix.rf.gd/proxy.php?type=id_number&term={t}",
         "pak": lambda t: f"https://zionix.rf.gd/proxy.php?type=pak&term={t}",
         "user": lambda t: f"https://tginfo-zionix.vercel.app/user-details?user={t}",
-        "email": lambda t: f"https://zionix.rf.gd/proxy.php?mode=mailinfo&term={t}",
+        "email": lambda t: f"https://zionix.rf.gd/proxy.php?type=mailinfo&term={t}",
         "vehicle": lambda t: f"https://zionix.rf.gd/proxy.php?type=rc&term={t}",
         "instagram": lambda t: f"https://insta-profile-info-api.vercel.app/api/instagram.php?username={t}",
     }
