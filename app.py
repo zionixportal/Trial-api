@@ -15,7 +15,7 @@ logging.basicConfig(level=logging.INFO)
 VALID_KEYS = {
     "vald7": datetime(2025, 11, 15, 23, 59, 59),
     "keyneverzion6601": datetime(2095, 11, 30, 23, 59, 59),
-    "zionix777": datetime(2026, 11, 27, 23, 59, 59),
+    "zionix777": datetime(2024, 11, 27, 23, 59, 59),
 }
 
 HEADERS = {
